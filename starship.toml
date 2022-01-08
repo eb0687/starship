@@ -67,7 +67,7 @@ style = "bright-white"
 format = "$all_status$ahead_behind"
 
 [git_branch]
-format = " [$symbol$branch]($style) "
+format = "[$symbol$branch]($style) "
 style = "bold yellow"
 
 # */
