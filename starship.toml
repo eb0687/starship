@@ -1,0 +1,74 @@
+# Inserts a blank line between shell prompts
+# add_newline = true
+
+[line_break]
+disabled = true
+
+# Move the directory to the second line
+format="$all$directory$character"
+
+[hostname]
+ssh_only = true
+format =  "[$hostname](bold red) "
+trim_at = "."
+disabled = false
+
+# [character]
+# error_symbol = "[✖](bold red) "
+[character]
+format = '$symbol '
+success_symbol = '[](bold green)'
+error_symbol = '[✖](bold red)'
+vicmd_symbol = '[](bold green)'
+disabled = false
+
+# {{{ Battery }}} /*
+
+# # Battery symbols
+# [battery]
+# full_symbol = "🔋 "
+# charging_symbol = "🔌 "
+# discharging_symbol = "💀 "
+
+# # Style for 0-15% battery capacity.
+# [[battery.display]]
+# threshold = 15
+# style = "bold red"
+
+# # Style for 10-30% battery capacity.
+# [[battery.display]]
+# threshold = 30
+# style = "bold yellow"
+
+# # Style for 30-100% battery capacity.
+# [[battery.display]]
+# threshold = 100
+# style = "bold white"
+
+# */
+# {{{ Git }}} /*
+
+[directory]
+truncation_length = 5
+format = "[$path]($style)[$lock_symbol]($lock_style) "
+
+[git_status]
+conflicted = "⚔️ "
+ahead = "🏎️ 💨 ×${count}"
+behind = "🐢 ×${count}"
+diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count}"
+untracked = "🛤️  ×${count}"
+stashed = "📦 "
+modified = "📝 ×${count}"
+staged = "🗃️  ×${count}"
+renamed = "📛 ×${count}"
+deleted = "🗑️  ×${count}"
+style = "bright-white"
+format = "$all_status$ahead_behind"
+
+[git_branch]
+format = " [$symbol$branch]($style) "
+style = "bold yellow"
+
+# */
+
