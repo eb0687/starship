@@ -71,4 +71,11 @@ format = "[$symbol$branch]($style) "
 style = "bold yellow"
 
 # */
+# {{{ Python }}} /*
+
+[python]
+symbol = " "
+pyenv_version_name = true
+
+# */
 
