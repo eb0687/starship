@@ -17,7 +17,7 @@ echo -e 'eval "$(starship init bash)"' >> .bashrc
 source ~/.bashrc
 
 # check if the starship directory exists, if it does not exist create it and copy over the starship.toml config file over.
-starship_directory=~/.config/starship
+starship_directory='~/.config/starship'
 if [ -d $starship_directory ];then
 	echo "directory exists, copying over starship config file"
 	cp starship.toml $starship_directory
