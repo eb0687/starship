@@ -2,7 +2,7 @@
 # add_newline = true
 
 # Move the directory to the second line
-format="$all$directory$character"
+format="$all$directory$shell$status$character"
 
 [line_break]
 disabled = true
@@ -60,16 +60,16 @@ truncation_length = 5
 format = "[$path]($style)[$lock_symbol]($lock_style) "
 
 [git_status]
-conflicted = "⚔️ "
+conflicted = "🏳 "
 ahead = "🏎️ 💨×${count} "
 behind = "🐢×${count} "
 diverged = "🔱 🏎️ 💨×${ahead_count} 🐢×${behind_count} "
 untracked = "🛤️×${count} "
 stashed = "📦 "
-modified = "📝×${count} "
+modified = " ×${count} "
 staged = "🗃️×${count}"
 renamed = "📛×${count} "
-deleted = "🗑️×${count} "
+deleted = "️×${count} "
 style = "bright-white"
 format = "$all_status$ahead_behind"
 up_to_date = " "
@@ -84,6 +84,14 @@ style = "bold yellow"
 [python]
 symbol = " "
 pyenv_version_name = true
+
+# */
+# /* {{{ Shell }}}
+
+[shell]
+disabled = true
+zsh_indicator = 'ZSH'
+style = "#5F5F5F"
 
 # */
 
