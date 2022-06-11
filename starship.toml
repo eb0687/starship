@@ -1,11 +1,11 @@
 # Inserts a blank line between shell prompts
 # add_newline = true
 
-[line_break]
-disabled = true
-
 # Move the directory to the second line
 format="$all$directory$character"
+
+[line_break]
+disabled = true
 
 [hostname]
 ssh_only = true
@@ -13,13 +13,20 @@ format =  "[$hostname](bold red) "
 trim_at = "."
 disabled = false
 
-# [character]
-# error_symbol = "[✖](bold red) "
 [character]
 format = '$symbol '
 success_symbol = '[](bold green)'
 error_symbol = '[✖](bold red)'
 vicmd_symbol = '[](bold blue)'
+disabled = false
+
+[status]
+format = "[$status$symbol]($style) "
+pipestatus_format = "\\[$pipestatus\\] => [$symbol$common_meaning$signal_name$maybe_int]($style) "
+symbol = ''
+pipestatus_separator = '| '
+map_symbol = false
+pipestatus = true
 disabled = false
 
 # {{{ Battery }}} /*
@@ -65,6 +72,7 @@ renamed = "📛 ×${count}"
 deleted = "🗑️  ×${count}"
 style = "bright-white"
 format = "$all_status$ahead_behind"
+up_to_date = "✓"
 
 [git_branch]
 format = "[$symbol$branch]($style) "
