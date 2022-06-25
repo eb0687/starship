@@ -59,20 +59,20 @@ disabled = false
 truncation_length = 5
 format = "[$path]($style)[$lock_symbol]($lock_style) "
 
-[git_status]
-conflicted = "🏳 "
-ahead = "🏎️ 💨×${count} "
-behind = "🐢×${count} "
-diverged = "🔱 🏎️ 💨×${ahead_count} 🐢×${behind_count} "
-untracked = "🛤️×${count} "
-stashed = "📦 "
-modified = " ×${count} "
-staged = "🗃️×${count}"
-renamed = "📛×${count} "
-deleted = "️×${count} "
-style = "bright-white"
-format = "$all_status$ahead_behind"
-up_to_date = " "
+# [git_status]
+# conflicted = "🏳 "
+# ahead = "🏎️ 💨×${count} "
+# behind = "🐢×${count} "
+# diverged = "🔱 🏎️ 💨×${ahead_count} 🐢×${behind_count} "
+# untracked = "🛤️×${count} "
+# stashed = "📦 "
+# modified = " ×${count} "
+# staged = "🗃️×${count} "
+# renamed = "📛×${count} "
+# deleted = "️×${count} "
+# style = "bright-white"
+# format = "$all_status$ahead_behind"
+# up_to_date = " "
 
 [git_branch]
 format = "[$symbol$branch]($style) "
