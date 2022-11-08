@@ -51,6 +51,6 @@ style = "#5F5F5F"
 
 [custom.home]
 when = "test $HOME = $PWD"
-style = "#8ec07c"
+style = "#fe8019"
 symbol = "ﮟ"
 format = "[$symbol]($style)"
