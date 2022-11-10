@@ -5,7 +5,7 @@
 format = "$env_var $all$directory$shell$status$character"
 
 [env_var.STARSHIP_DISTRO]
-format = '[$env_value](white)'
+format = '[$env_value](black)'
 variable = "STARSHIP_DISTRO"
 disabled = false
 
