@@ -2,7 +2,12 @@
 # add_newline = true
 
 # Move the directory to the second line
-format = "${custom.home} $all$directory$shell$status$character"
+format = "$env_var $all$directory$shell$status$character"
+
+[env_var.STARSHIP_DISTRO]
+format = '[$env_value](white)'
+variable = "STARSHIP_DISTRO"
+disabled = false
 
 [line_break]
 disabled = true
@@ -49,8 +54,11 @@ disabled = true
 zsh_indicator = 'ZSH'
 style = "#5F5F5F"
 
-[custom.home]
-when = "test $HOME = $PWD"
-style = "#89B482"
-symbol = "ﮟ"
-format = "[$symbol]($style)"
+[nodejs]
+disabled = true
+
+# [custom.home]
+# when = "test $HOME = $PWD"
+# style = "#89B482"
+# symbol = "ﮟ"
+# format = "[$symbol]($style)"
