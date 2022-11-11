@@ -35,7 +35,10 @@ pipestatus = true
 disabled = false
 
 [directory]
-truncation_length = 5
+truncation_length = 2
+truncation_symbol = "../"
+# home_symbol = " ~"
+read_only = "  "
 format = "[$path]($style)[$lock_symbol]($lock_style) "
 
 [git_branch]
@@ -56,9 +59,3 @@ style = "#5F5F5F"
 
 [nodejs]
 disabled = true
-
-# [custom.home]
-# when = "test $HOME = $PWD"
-# style = "#89B482"
-# symbol = "ﮟ"
-# format = "[$symbol]($style)"
