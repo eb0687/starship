@@ -2,7 +2,7 @@
 # add_newline = true
 
 # Move the directory to the second line
-format = " $env_var  $all$directory$shell$status$character"
+format = " $env_var $all$directory$shell$status$character"
 
 [env_var.STARSHIP_DISTRO]
 format = '[$env_value](black)'
@@ -62,3 +62,7 @@ disabled = true
 
 [ruby]
 symbol = " "
+
+[terraform]
+format = "[$symbol$workspace](#7B42BC)"
+symbol = "󱁢 "
