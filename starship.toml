@@ -2,12 +2,12 @@
 # add_newline = true
 
 # Move the directory to the second line
-format = " $env_var $all$directory$shell$status$character"
+format = "$env_var$all$directory$shell$status$character"
 
 [env_var.STARSHIP_DISTRO]
 format = '[$env_value](black)'
 variable = "STARSHIP_DISTRO"
-disabled = false
+disabled = true
 
 [line_break]
 disabled = true
@@ -23,8 +23,8 @@ disabled = false
 
 [character]
 format = '$symbol '
-success_symbol = '[](bold green)'
-error_symbol = '[✖](bold red)'
+success_symbol = '[](bold green)'
+error_symbol = '[](bold red)'
 vicmd_symbol = '[](bold blue)'
 disabled = false
 
@@ -32,7 +32,7 @@ disabled = false
 format = "[$status$symbol]($style) "
 pipestatus_format = "\\[$pipestatus\\] => [$symbol$common_meaning$signal_name$maybe_int]($style) "
 symbol = ''
-pipestatus_separator = '| '
+pipestatus_separator = '|'
 map_symbol = false
 pipestatus = true
 disabled = false
