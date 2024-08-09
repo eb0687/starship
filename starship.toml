@@ -66,3 +66,8 @@ symbol = " "
 [terraform]
 format = "[$symbol$workspace](#7B42BC)"
 symbol = "󱁢 "
+
+[golang]
+# symbol = "golang "
+format = 'via [$symbol($version)](bold cyan) '
+symbol = "🐹 "
