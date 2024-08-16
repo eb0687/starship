@@ -36,7 +36,7 @@ disabled = false
 format = '$symbol '
 success_symbol = '[➜](bold fg:color_green)'
 error_symbol = '[](bold fg:color_red)'
-vicmd_symbol = '[](bold fg:color_purple)'
+vimcmd_symbol = "[](bold fg:color_purple)"
 disabled = false
 
 [status]
