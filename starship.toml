@@ -1,8 +1,22 @@
-# Inserts a blank line between shell prompts
-# add_newline = true
+# Get editor completions based on the config schema
+'$schema' = 'https://starship.rs/config-schema.json'
 
 # Move the directory to the second line
 format = "$env_var$all$directory$shell$status$character"
+add_newline = false
+palette = 'gruvbox-material'
+
+[palettes.gruvbox-material]
+color_fg0 = '#ddc7a1'
+color_bg1 = '#252423'
+color_bg2 = '#32302f'
+color_blue = '#7daea3'
+color_aqua = '#89b482'
+color_green = '#a9b665'
+color_orange = '#e78a4e'
+color_purple = '#d3869b'
+color_red = '#ea6962'
+color_yellow = '#d8a657'
 
 [env_var.STARSHIP_DISTRO]
 format = '[$env_value](black)'
@@ -14,15 +28,15 @@ disabled = true
 
 [hostname]
 ssh_only = true
-format = "[$hostname](bold red) "
+format = "[$hostname](bold fg:color_red) "
 trim_at = "."
 disabled = false
 
 [character]
 format = '$symbol '
-success_symbol = '[➜](bold green)'
-error_symbol = '[](bold red)'
-vicmd_symbol = '[](bold blue)'
+success_symbol = '[➜](bold fg:color_green)'
+error_symbol = '[](bold fg:color_red)'
+vicmd_symbol = '[](bold fg:color_purple)'
 disabled = false
 
 [status]
@@ -35,15 +49,17 @@ pipestatus = true
 disabled = false
 
 [directory]
+style = "bold fg:color_blue"
+read_only_style = 'bold fg:color_red'
 truncation_length = 1
-truncation_symbol = "../"
-# home_symbol = " ~"
-read_only = "  "
-format = "[$path]($style)[$lock_symbol]($lock_style) "
+truncation_symbol = ".../"
+home_symbol = "~"
+read_only = " "
+format = "[$path]($style)[$read_only]($read_only_style) "
 
 [git_branch]
 format = "[$symbol$branch]($style) "
-style = "bold yellow"
+style = "bold fg:color_aqua"
 
 [python]
 symbol = " "
@@ -64,10 +80,10 @@ disabled = true
 symbol = " "
 
 [terraform]
-format = "[$symbol$workspace](#7B42BC)"
+format = "[$symbol$workspace](fg:color_purple)"
 symbol = "󱁢 "
 
 [golang]
-# symbol = "golang "
-format = 'via [$symbol($version)](bold cyan) '
 symbol = "🐹 "
+format = 'via [$symbol\(($version)\)]($style) '
+style = 'bold fg:color_orange'
