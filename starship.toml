@@ -67,6 +67,8 @@ pyenv_version_name = true
 
 [lua]
 symbol = " "
+format = '[via $symbol\(($version)\)]($style) '
+style = 'bold fg:color_purple'
 
 [shell]
 disabled = true
@@ -85,5 +87,5 @@ symbol = "󱁢 "
 
 [golang]
 symbol = "🐹 "
-format = 'via [$symbol\(($version)\)]($style) '
+format = '[via $symbol\(($version)\)]($style) '
 style = 'bold fg:color_orange'
