@@ -5,6 +5,7 @@
 format = "$env_var$all$directory$shell$status$character"
 add_newline = false
 palette = 'gruvbox-material'
+command_timeout = 3600000
 
 [palettes.gruvbox-material]
 color_fg0 = '#ddc7a1'
