@@ -1,3 +1,0 @@
-[submodule "env/.config/starship"]
-	path = env/.config/starship
-	url = git@github.com:eb0687/starship.git
