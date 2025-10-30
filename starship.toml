@@ -79,6 +79,9 @@ style = "#5F5F5F"
 [nodejs]
 disabled = true
 
+[package]
+disabled = true
+
 [ruby]
 symbol = " "
 
