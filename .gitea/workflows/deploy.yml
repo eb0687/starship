@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: qualify-push
     if: >-
-      github.event_name == 'workflow_dispatch' || needs.qualify-push.outputs.deploy == 'true'
+      always() && (github.event_name == 'workflow_dispatch' || needs.qualify-push.outputs.deploy == 'true')
     steps:
       - name: Dispatch the approved Starship target
         env:
