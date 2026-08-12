@@ -4,7 +4,7 @@
 # Move the directory to the second line
 format = "$env_var$all$directory$shell$status$character"
 add_newline = false
-palette = 'catppuccin_macchiato'
+palette = 'gruvbox-dark'
 command_timeout = 3600000
 
 [palettes.gruvbox-dark]
