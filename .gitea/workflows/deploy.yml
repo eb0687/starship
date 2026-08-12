@@ -1,0 +1,24 @@
+---
+name: Deploy Starship configuration
+
+'on':
+  push:
+    branches: [main]
+    paths:
+      - starship.toml
+  workflow_dispatch:
+
+jobs:
+  deployment-request:
+    name: Request central deployment
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch the approved Starship target
+        env:
+          CONTROL_REPOSITORY_WORKFLOW_TOKEN: ${{ secrets.CONTROL_REPOSITORY_WORKFLOW_TOKEN }}
+        run: |
+          curl --fail-with-body --request POST \
+            --header "Authorization: token $CONTROL_REPOSITORY_WORKFLOW_TOKEN" \
+            --header "Content-Type: application/json" \
+            --data '{"ref":"main","inputs":{"target":"starship","repository":"bigboss/starship"}}' \
+            https://gitea.sooper.duckdns.org/api/v1/repos/bigboss/ansible-automation-infra/actions/workflows/deploy.yml/dispatches
