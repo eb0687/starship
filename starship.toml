@@ -106,3 +106,11 @@ symbol = "󱁢 "
 symbol = "🐹 "
 format = '[via $symbol\(($version)\)]($style) '
 style = 'bold fg:orange'
+
+[nix_shell]
+disabled = false
+impure_msg = '[impure shell](bold red)'
+pure_msg = '[pure shell](bold green)'
+unknown_msg = '[unknown shell](bold yellow)'
+format = 'via [$state](bold purple) '
+# format = 'via [$symbol $state (\($name\))](bold purple)'
