@@ -32,6 +32,19 @@ aqua = "#8bd5ca"
 blue = "#8aadf4"
 purple = "#c6a0f6"
 
+[palettes.flexoki-dark]
+bg0 = "#100F0F"
+bg1 = "#1C1B1A"
+bg2 = "#282726"
+fg0 = "#CECDC3"
+red = "#D14D41"
+orange = "#DA702C"
+yellow = "#D0A215"
+green = "#879A39"
+aqua = "#3AA99F"
+blue = "#4385BE"
+purple = "#8B7EC8"
+
 [env_var.STARSHIP_DISTRO]
 format = '[$env_value](black)'
 variable = "STARSHIP_DISTRO"
